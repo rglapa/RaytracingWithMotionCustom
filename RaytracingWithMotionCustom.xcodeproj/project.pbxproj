@@ -6,8 +6,33 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		45720CDF2DAC3DC7006CB46E /* ninja.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 45720CDD2DAC3DC7006CB46E /* ninja.mtl */; };
+		45720CE02DAC3DC7006CB46E /* ninja_0.obj in Resources */ = {isa = PBXBuildFile; fileRef = 45720CDB2DAC3DC7006CB46E /* ninja_0.obj */; };
+		45720CE12DAC3DC7006CB46E /* ninja_1.obj in Resources */ = {isa = PBXBuildFile; fileRef = 45720CDC2DAC3DC7006CB46E /* ninja_1.obj */; };
+		45720CE52DAC3EE3006CB46E /* Renderer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 45720CE32DAC3E60006CB46E /* Renderer.mm */; };
+		45720CE82DAC3F55006CB46E /* Scene.mm in Sources */ = {isa = PBXBuildFile; fileRef = 45720CE72DAC3F53006CB46E /* Scene.mm */; };
+		45720CEA2DAC3F64006CB46E /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 45720CE92DAC3F5E006CB46E /* Shaders.metal */; };
+		45720CEE2DAC3F84006CB46E /* Transforms.mm in Sources */ = {isa = PBXBuildFile; fileRef = 45720CED2DAC3F83006CB46E /* Transforms.mm */; };
+		45720CF12DAC40D5006CB46E /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45720CF02DAC40D5006CB46E /* MetalKit.framework */; };
+		45720CF32DAC40E0006CB46E /* ModelIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45720CF22DAC40E0006CB46E /* ModelIO.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		45720CC22DAC3CE6006CB46E /* RaytracingWithMotionCustom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RaytracingWithMotionCustom.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		45720CDB2DAC3DC7006CB46E /* ninja_0.obj */ = {isa = PBXFileReference; lastKnownFileType = text; path = ninja_0.obj; sourceTree = "<group>"; };
+		45720CDC2DAC3DC7006CB46E /* ninja_1.obj */ = {isa = PBXFileReference; lastKnownFileType = text; path = ninja_1.obj; sourceTree = "<group>"; };
+		45720CDD2DAC3DC7006CB46E /* ninja.mtl */ = {isa = PBXFileReference; lastKnownFileType = text; path = ninja.mtl; sourceTree = "<group>"; };
+		45720CE22DAC3E2D006CB46E /* Renderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Renderer.h; sourceTree = "<group>"; };
+		45720CE32DAC3E60006CB46E /* Renderer.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Renderer.mm; sourceTree = "<group>"; };
+		45720CE62DAC3F41006CB46E /* Scene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
+		45720CE72DAC3F53006CB46E /* Scene.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Scene.mm; sourceTree = "<group>"; };
+		45720CE92DAC3F5E006CB46E /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
+		45720CEB2DAC3F6A006CB46E /* ShaderTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShaderTypes.h; sourceTree = "<group>"; };
+		45720CEC2DAC3F75006CB46E /* Transforms.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Transforms.h; sourceTree = "<group>"; };
+		45720CED2DAC3F83006CB46E /* Transforms.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Transforms.mm; sourceTree = "<group>"; };
+		45720CF02DAC40D5006CB46E /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		45720CF22DAC40E0006CB46E /* ModelIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ModelIO.framework; path = System/Library/Frameworks/ModelIO.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -23,6 +48,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45720CF32DAC40E0006CB46E /* ModelIO.framework in Frameworks */,
+				45720CF12DAC40D5006CB46E /* MetalKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -32,7 +59,10 @@
 		45720CB92DAC3CE6006CB46E = {
 			isa = PBXGroup;
 			children = (
+				45720CDE2DAC3DC7006CB46E /* Ninja */,
+				45720CD82DAC3D1A006CB46E /* Renderer */,
 				45720CC42DAC3CE6006CB46E /* RaytracingWithMotionCustom */,
+				45720CEF2DAC40D5006CB46E /* Frameworks */,
 				45720CC32DAC3CE6006CB46E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +73,40 @@
 				45720CC22DAC3CE6006CB46E /* RaytracingWithMotionCustom.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		45720CD82DAC3D1A006CB46E /* Renderer */ = {
+			isa = PBXGroup;
+			children = (
+				45720CE22DAC3E2D006CB46E /* Renderer.h */,
+				45720CE32DAC3E60006CB46E /* Renderer.mm */,
+				45720CE62DAC3F41006CB46E /* Scene.h */,
+				45720CE72DAC3F53006CB46E /* Scene.mm */,
+				45720CE92DAC3F5E006CB46E /* Shaders.metal */,
+				45720CEB2DAC3F6A006CB46E /* ShaderTypes.h */,
+				45720CEC2DAC3F75006CB46E /* Transforms.h */,
+				45720CED2DAC3F83006CB46E /* Transforms.mm */,
+			);
+			path = Renderer;
+			sourceTree = "<group>";
+		};
+		45720CDE2DAC3DC7006CB46E /* Ninja */ = {
+			isa = PBXGroup;
+			children = (
+				45720CDB2DAC3DC7006CB46E /* ninja_0.obj */,
+				45720CDC2DAC3DC7006CB46E /* ninja_1.obj */,
+				45720CDD2DAC3DC7006CB46E /* ninja.mtl */,
+			);
+			path = Ninja;
+			sourceTree = "<group>";
+		};
+		45720CEF2DAC40D5006CB46E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				45720CF22DAC40E0006CB46E /* ModelIO.framework */,
+				45720CF02DAC40D5006CB46E /* MetalKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -108,6 +172,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45720CDF2DAC3DC7006CB46E /* ninja.mtl in Resources */,
+				45720CE02DAC3DC7006CB46E /* ninja_0.obj in Resources */,
+				45720CE12DAC3DC7006CB46E /* ninja_1.obj in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +185,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45720CEA2DAC3F64006CB46E /* Shaders.metal in Sources */,
+				45720CE52DAC3EE3006CB46E /* Renderer.mm in Sources */,
+				45720CE82DAC3F55006CB46E /* Scene.mm in Sources */,
+				45720CEE2DAC3F84006CB46E /* Transforms.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,11 +248,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = RaytracingWithMotionCustom/Info.plist;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 15.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_MODULE_NAME = RaytracingWithMotion;
+				PRODUCT_NAME = RaytracingWithMotion;
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -233,10 +307,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = RaytracingWithMotionCustom/Info.plist;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 15.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				PRODUCT_MODULE_NAME = RaytracingWithMotion;
+				PRODUCT_NAME = RaytracingWithMotion;
 				SDKROOT = macosx;
 			};
 			name = Release;
